@@ -5,27 +5,30 @@ import {
   Text,
   View,
   TouchableOpacity,
+  SafeAreaView,
 } from "react-native";
 
 const Main = (): ReactElement => {
   return (
-    <ImageBackground
-      source={require("../../assets/home.jpg")}
-      style={styles.imageBackground}
-      resizeMode="cover"
-    >
-      <View style={styles.imageFilter}>
-        <View style={styles.container}>
-          <View style={styles.container1}>
-            <View style={styles.container2}>
-              <View>
-                <Text style={styles.title}>Bienvenue dans STAR Insights</Text>
-              </View>
-              <View style={styles.descriptionContainer}>
-                <Text style={styles.description}>
-                  L’application de tous ceux qui écrivent l’histoire du Royaume
-                  des Cieux
-                </Text>
+    <SafeAreaView>
+      <ImageBackground
+        source={require("../../assets/home.jpg")}
+        style={styles.imageBackground}
+        resizeMode="cover"
+      >
+        <View style={styles.imageFilter}>
+          <View style={styles.container}>
+            <View style={styles.container1}>
+              <View style={styles.container2}>
+                <View>
+                  <Text style={styles.title}>Bienvenue dans STAR Insights</Text>
+                </View>
+                <View style={styles.descriptionContainer}>
+                  <Text style={styles.description}>
+                    L’application de tous ceux qui écrivent l’histoire du
+                    Royaume des Cieux
+                  </Text>
+                </View>
               </View>
             </View>
           </View>
@@ -33,8 +36,8 @@ const Main = (): ReactElement => {
         <TouchableOpacity style={styles.buttonWrapper}>
           <Text style={styles.textButton}>Connectez-vous</Text>
         </TouchableOpacity>
-      </View>
-    </ImageBackground>
+      </ImageBackground>
+    </SafeAreaView>
   );
 };
 
@@ -44,15 +47,6 @@ const styles = StyleSheet.create({
   buttonWrapper: {
     width: "90%",
     flexDirection: "column",
-    /*     justifyContent: "flex-start",
-    alignItems: "flex-start",
-    display: "flex",
-    height: 54,
-    alignSelf: "stretch",
-    paddingLeft: 16,
-    paddingRight: 16,
-    backgroundColor: "#2D5C54",
-    borderRadius: 14, */
     flex: 1.5,
     backgroundColor: "#2D5C54",
     marginLeft: 16,
@@ -65,7 +59,6 @@ const styles = StyleSheet.create({
   },
   textButton: {
     color: "white",
-    fontFamily: "Acme",
     width: "100%",
     textAlign: "center",
     textAlignVertical: "center",
